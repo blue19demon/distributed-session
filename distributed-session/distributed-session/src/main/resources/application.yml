@@ -1,0 +1,12 @@
+server:  port: 8888
+## Memcache 配置 ##
+memcache:
+  servers: 192.168.0.66:11211
+  failover: true
+  initConn: 100
+  minConn: 20
+  maxConn: 1000
+  maintSleep: 50
+  nagel: false
+  socketTO: 3000
+  aliveCheck: truespring:  redis:    host: 192.168.0.66    port: 6379    password:     database: 0    max-idle: 8    min-idle: 0    max-active: 8    maxwait: -1    timeout: 0    isRedisCache: 1  #是否使用redis缓存  datasource:    driver-class-name: com.mysql.jdbc.Driver    url: jdbc:mysql://192.168.0.66:3306/spring_shiro?useUnicode=true&amp;characterEncoding=UTF-8    username: root    password: 123456    type: com.alibaba.druid.pool.DruidDataSource  jpa:    show-sql: true    hibernate:      ddl-auto: update  http:    encoding:      charset: utf-8      enabled: true  mvc:      view:        suffix: .jsp        prefix: /WEB-INF/jsp/      thymeleaf:        cache: false        enabled: false      resources:        static-locations: classpath:/WEB-INF/resources      http:        multipart:          max-file-size: 100Mb          max-request-size: 100Mblogging:  level:    root: infoshiro:  jessionid: sessionId
