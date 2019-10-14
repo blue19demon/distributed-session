@@ -1,0 +1,19 @@
+spring:
+  session:
+    store-type: redis
+  application:
+    name: distribution-session
+  thymeleaf:
+    prefix: classpath:/templates/
+  redis:
+    host: 127.0.0.1
+    pool:
+      max-active: 100
+      max-idle: 5
+      max-wait: 60000
+    port: 6379
+    
+server:
+  port: 8888
+  context-path: /session
+    

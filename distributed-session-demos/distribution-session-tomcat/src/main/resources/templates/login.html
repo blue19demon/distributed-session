@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>登录</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js" />
+  <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"/>
+</head>
+
+<body style="text-align: center">
+    <form th:action="@{/login}" method="post">
+       <div>
+            <span style="font-size: 12px;color: red" th:text="${session.port}"></span>
+        <br />
+        </div>
+        <div>
+            <!--/*@thymesVar id="error" type=""*/-->
+            <span id="basic-addon0">&nbsp;</span>
+            <span style="font-size: 12px;color: red" th:text="${error}" aria-describedby="basic-addon0"></span>
+        <br />
+        </div>
+        <div>
+            <span id="basic-addon1">@</span>
+            <input id="user_name" name="username" type="text" placeholder="用户名" aria-describedby="basic-addon1" />
+
+        </div>
+        <br />
+        <div>
+            <span id="basic-addon2">@</span>
+            <input id="password" name="password" type="password" placeholder="密码" aria-describedby="basic-addon2" />
+        </div>
+        <br />
+        <button type="submit" style="width:190px;">登 录</button>
+    </form>
+</body>
+</html>

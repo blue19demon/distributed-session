@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: distribution-session-tomcat
+  thymeleaf:
+    prefix: classpath:/templates/
+    
+server:
+  port: 8888
+  context-path: /session
+    
